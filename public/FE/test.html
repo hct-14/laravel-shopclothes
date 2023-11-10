@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+  .slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slider-container {
+    display: flex;
+    transition: transform 1s;
+  }
+
+  .slider-item {
+    flex: 0 0 20%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    position: relative;
+    overflow: hidden; /* Ẩn phần nằm ngoài ảnh */
+  }
+
+  .slider-item img {
+    max-width: 100%;
+  }
+  .slider-item::before {
+    content: "Xem thêm";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 18px;
+    line-height: 2;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+.slider-item:hover::before {
+    opacity: 1;
+}
+
+  .slider-item:hover::before {
+    left: 0;
+    opacity: 1;
+  }
+
+  .slider-item a {
+    color: #fff;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .slider-item a:hover {
+    text-decoration: underline;
+  }
+</style>
+<body>
+  <div class="slider">
+    <div class="slider-container">
+      <div class="slider-item">
+        <img src="/images/test.jpg" alt="Sản phẩm 1">
+      </div>
+      <div class="slider-item">
+        <img src="/images/test.jpg" alt="Sản phẩm 2">
+      </div>
+      <div class="slider-item">
+        <img src="/images/test.jpg" alt="Sản phẩm 3">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

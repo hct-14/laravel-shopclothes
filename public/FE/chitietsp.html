@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <link href="{{ asset('FE/style.css') }}" rel="stylesheet"> 
+    <link href="{{ asset('FE/product.css') }}" rel="stylesheet"> 
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="app">
+        <div class="head">
+            <ul type ="none">
+                <li > <i class="fas fa-home"></i> <span>Hệ thống showroom</span> </li>
+                <li><i class="fas fa-phone"></i> <span> Mua hàng online:0123456788</span> </li>
+            </ul>
+        </div> <!--head-->
+        <div class="header">
+            <div class="header-left">
+                <img src="/images/logo.webp" alt="">
+            </div>
+            <div class="header-right">
+                <div class="topnav" id="myTopnav">
+                    <div class="dropdown">
+                        <button class="dropbtn">SẢN PHẨM
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="#">Đầm</a>
+                          <a href="#">Áo sơ mi</a>
+                          <a href="#">Áo kiểu</a>
+                          <a href="#">Quần</a>
+                          <a href="#">Chân váy</a>
+                          <a href="#">Set bộ</a>
+                          <a href="#">Áo dài</a>
+                          <a href="#">Áo len</a>                          <a href="#">Áo len</a>
+                          <a href="#">Áo Khoắc</a>
+
+                        </div>
+                      </div>
+                    <a href="#home" class="active">SẢN PHẨM MỚI</a>
+                    <a href="#news">BÔJ SƯU TẬP</a>
+                    <a href="#contact">NEM ONLINE</a>
+                   
+                    <a href="#about">SALE</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                  </div>
+                  
+                
+                
+            </div>
+            <div class="topnav2">
+              <ul type="none">
+                  <li><i class="fas fa-search"></i></li>
+                  <li id="account">
+                      <i class="fas fa-user"></i><span>Tai khoan</span>
+                      <div class="dropdown-content">
+                          <a href="#">Trang cá nhân</a>
+                          <a href="#">Cài đặt</a>
+                          <a href="#">Đăng xuất</a>
+                      </div>
+                  </li>
+                  <li><i class="fas fa-shopping-cart"></i><span>gio hang</span></li>
+              </ul>
+          </div>
+        </div>  <!--header-->
+<!-- ------------------------------------ -->
+
+        <div class="product">
+            <div class="protext">
+                <h3>chi tiet san pham</h3>
+
+            </div>
+
+
+            <div class="chitiet">
+                <div class="chitiet1">
+                    <div class="chitiet1-img" onclick="changeImage('/images/dang1.webp')">
+                      <img src="/images/dang1.webp" alt="">
+                    </div>
+                    <div class="chitiet1-img" onclick="changeImage('/images/dang2.webp')">
+                      <img src="/images/dang2.webp" alt="">
+                    </div>
+                    <div class="chitiet1-img" onclick="changeImage('/images/dang3.webp')">
+                      <img src="/images/dang3.webp" alt="">
+                    </div>
+                  </div>
+                  <div class="chitiet2">
+                    <div class="chitiet2-img">
+                      <img id="largeImage" src="/images/dang3.webp" alt="">
+                    </div>
+                  </div>
+                <div class="chitiet3">
+                    <div class="chitiet3-text">
+                        <span>Ao Vest thiet ke 123</span>
+                    </div>
+                    <div class="chitiet3-text2">
+                        <ul type="none">
+                            <li>
+                                <span>Thương hiệu: Nem </span>
+                            </li>
+                            <li>
+                                <span>
+                                    Mã sản phẩm: 12369
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chitiet3-text">
+                        <span>123456</span>
+                    </div>
+                    <div class="size">
+                        <span>Size</span>
+                        <ul type="none">
+                            <li value="s">S</li>
+                            <li value="l">L</li>
+                            <li value="xl">XL</li>
+                        </ul>
+                    </div>
+                    <div class="size">
+                        <span>Màu sắc</span>
+                        <ul type="none">
+                            <li value="trắng">Trắng</li>
+                            <li value="đen">Đen</li>
+                        </ul>
+                    </div>  
+                    <div class="soluong">
+                        <span>
+                            còn 123 sản phẩm
+                        </span>
+                    </div>  
+                        
+                    <div class="quantity">
+                        <span>Số lượng:</span>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1">
+                    </div>
+                    <div class="addcart">
+                        <input class="addcart1" type="submit" value="Thêm vào giỏ hàng">
+                    </div>
+                    
+                    <!-- <div class="addcart">
+                        <input class="addcart1" type="submit" value="Thêm vào giỏ hàng">
+                    </div> -->
+                 </div>
+         
+            </div>
+            <div class="sanphamtuongtu">
+                <div class="sp-text">
+                    <h3>San Pham Tuong Tu</h3>
+
+                </div>
+                <div class="spcontainer">
+                    <div class="col">
+                        <div class="col-img">
+                            <img src="/images/dang2.webp" alt="">
+                           
+                        </div>
+                        <div class="col-text">
+                            <span>ao dam vay xin</span>
+                            <p>123456789</p>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <div class="col">Cột 2</div>
+                    <div class="col">Cột 3</div>
+                    <div class="col">Cột 4</div>
+                    <div class="col">Cột 4</div>
+
+                  </div>
+                  
+             </div>
+        </div>   
+          <!-- --------------------------------------------------- -->
+          <div class="footer">
+  
+            <div class="foot-text">
+           <span> banquyen@phamvietem</span>
+            </div>
+          </div>
+    </div> <!-- appp-->
+</body>
+<script>
+    function changeImage(imageSrc) {
+  var largeImage = document.getElementById('largeImage');
+  largeImage.src = imageSrc;
+}
+
+</script>
+
+</html>

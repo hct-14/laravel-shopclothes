@@ -1,0 +1,43 @@
+.cart-header{
+    margin-left: 10%;
+    border-top: 1px solid #000; /* Đường viền phía trên */
+    border-bottom: 1px solid #000; 
+}
+a {
+    text-decoration: none; /* Bỏ gạch chân cho màu của thẻ a */
+    color: rgb(0, 0, 0); /* Đặt màu xanh cho liên kết */
+  }
+  
+table {
+    margin: 0 auto; /* Căn giữa theo chiều ngang */
+    width: 80%; /* Điều chỉnh chiều rộng của bảng */
+    text-align: center; /* Căn giữa nội dung trong bảng */
+}
+
+th, td {
+    padding: 10px; /* Tạo khoảng cách giữa nội dung và các cạnh của ô */
+}
+
+.tongtien{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.tongtien span{
+    margin-right: 10%;
+
+}
+.thanhtoanngay{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    
+}
+.thanhtoanngay input[type="submit"] {
+    margin-top: 15px;
+    margin-right: 10%;
+    width: 200px; /* Điều chỉnh chiều rộng bằng cách thay đổi giá trị này */
+    height: 40px; /* Điều chỉnh chiều cao bằng cách thay đổi giá trị này */
+    padding: 10px 20px; /* Điều chỉnh khoảng cách bên trong nút */
+    font-size: 18px; /* Điều chỉnh kích thước chữ bên trong */
+}

@@ -1,0 +1,132 @@
+.spcontainer{
+  display: flex;
+  width: 100%;
+}
+a {
+  text-decoration: none; /* Bỏ gạch chân cho màu của thẻ a */
+  color: rgb(0, 0, 0); /* Đặt màu xanh cho liên kết */
+}
+
+
+.spcontainer-left{
+  margin-top: 20px;
+  flex:25%;
+  display: flex;
+  flex-direction: column; 
+}
+.spcontainer-left span{
+  margin-left: 20%;
+  color: #070707;
+  font-weight: bold;
+  cursor: pointer;
+}
+.spcontainer-left p{
+  color: #070707;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 20%;
+}.spcontainer-left ul{
+  margin-top: -1%;
+  color: #8A8A8F;
+  margin-left: 10%;
+}
+.spcontainer-right{
+  margin-top: 20px;
+  flex:75%;
+}
+.spcontainer1 {
+  margin-right: 10%;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Tạo 4 cột bằng nhau */
+  gap: 20px;  
+  
+}
+
+.spcontainer-column {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+.col-product {
+  height: 400px;
+  /* padding: 10px; */
+  border: 1px solid #ccc; /* Đường viền phía trên */
+
+  text-align: center;
+  flex-direction: column;
+}
+.col-product-img{
+  height: 80%;
+  width: 100%;
+}
+.col-product img{
+  height: 100%;
+}
+.col-product-text {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: aliceblue;
+}
+.col-product-text span{
+  font-weight: 600;
+}
+.col-product {
+  position: relative;
+  overflow: hidden;
+  z-index: 1; /* Đặt z-index cao hơn cho phần tử .col-product */
+}
+
+.col-product-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.col-product-img img {
+  max-width: 100%;
+}
+
+.col-product-text {
+  position: relative;
+  overflow: hidden;
+  z-index: 2; /* Đặt z-index cao hơn cho phần tử .col-product-text */
+}
+
+.col-product::before {
+  content: "Xem thêm";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 18px;
+  line-height: 2;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s, transform 1s;
+  z-index: 10; /* Đặt z-index thấp hơn cho phần tử .col-product::before */
+}
+
+.col-product:hover::before {
+  opacity: 1;
+  left: 0;
+}
+
+.col-product a {
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.col-product a:hover {
+  text-decoration: underline;
+}
